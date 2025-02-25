@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Michael</title>
+    <link rel="stylesheet" href="text.css">
+    <style>
+        /* Full-page layout with scrollable content */
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            overflow-y: auto; /* Allows scrolling if content exceeds viewport */
+            background: linear-gradient(to top right, blue, red, grey, yellow);
+            font-family: Arial, sans-serif;
+        }
+
+        /* Header */
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        /* Main content layout */
+        main {
+            display: flex;
+            justify-content: space-between;
+            width: 90%;
+            max-width: 1200px;
+            flex-grow: 1;
+            padding: 20px;
+            gap: 20px;
+        }
+
+        /* Left Column: Spinning Fish */
+        .left-column {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .fish {
+            width: 150px;
+            animation: spin 3s infinite linear;
+        }
+
+        /* Middle Column: Text Content */
+        .middle-column {
+            flex: 2;
+            text-align: left;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            overflow-y: auto;
+            max-height: 75vh;
+        }
+
+        /* Right Column: Images */
+        .right-column {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow-y: auto;
+        }
+
+        .right-column img {
+            width: 100%;
+            max-width: 250px;
+            margin-bottom: 10px;
+        }
+
+        /* Spinning effect for fish */
+        @keyframes spin {
+            from {
+                transform: rotateY(0deg);
+            }
+            to {
+                transform: rotateY(360deg);
+            }
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 10px;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        /* Falling cash effect */
+        .falling-cash {
+            position: absolute;
+            width: 50px;
+            animation: fall 5s linear forwards;
+            left: calc(5% + 90% * random());
+        }
+
+        @keyframes fall {
+            from {
+                top: -50px;
+                opacity: 1;
+            }
+            to {
+                top: 100vh;
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <h1><em>HELLO EVERYONE</em><br> I AM MICHAEL</h1>
+    <input type="text" id="password-box" placeholder="Enter password..." />
+
+    <button id="start-bounce">Win Solitaire</button>
+    <div id="card-container"></div>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Left Column: Spinning Fish -->
+        <aside class="left-column">
+            <img src="fish.png" alt="Spinning Fish" class="fish">
+        </aside>
+
+        <!-- Middle Column: Main Text -->
+        <article class="middle-column">
+            <h2>What is Canned Turkey?</h2>
+            <p>
+                Canned turkey is simply turkey meat that has been cooked, shredded, and preserved in a can, often along with broth, for easy preparation. It can be made from both white and dark meat and is usually packed in its own juices or with added liquid like broth or gravy for extra flavor.
+            </p>
+        
+            <h2>The History of Turkey as Food</h2>
+            <p>
+                Turkeys have been a food source for centuries, dating back to the indigenous peoples of North and Central America. Domesticated by the Aztecs and other early civilizations, turkeys were later introduced to Europe in the 16th century. They quickly became a popular dish due to their size and rich flavor.
+            </p>
+            <p>
+                By the 19th century, turkey had solidified its place as a staple in holiday meals, particularly in the United States and Canada. The tradition of eating turkey on Thanksgiving is said to date back to the Pilgrims' first feast in 1621, though historians debate whether turkey was actually served.
+            </p>
+        
+            <h2>Why is Turkey So Popular?</h2>
+            <p>Turkey is a versatile meat that can be prepared in many ways, from roasting to smoking and even deep-frying. Some key reasons why turkey remains a favorite food include:</p>
+            
+            <ul>
+                <li><strong>High in Protein:</strong> A lean source of protein, making it a healthy option.</li>
+                <li><strong>Low in Fat:</strong> Skinless turkey breast is one of the lowest-fat meats available.</li>
+                <li><strong>Rich in Nutrients:</strong> Provides essential vitamins like B6, B12, and niacin, as well as minerals like zinc and selenium.</li>
+                <li><strong>Great for Leftovers:</strong> Can be used in sandwiches, soups, casseroles, and even tacos!</li>
+            </ul>
+        
+            <h2>Ways to Eat Turkey</h2>
+            <p>Turkey isn’t just for Thanksgiving! Here are some of the most popular ways to enjoy turkey year-round:</p>
+        
+            <ul>
+                <li>🥪 <strong>Turkey Sandwiches:</strong> A deli classic, great with cheese and mustard.</li>
+                <li>🍲 <strong>Turkey Soup:</strong> Made with turkey broth, vegetables, and pasta or rice.</li>
+                <li>🥗 <strong>Turkey Salads:</strong> Mix with greens, cranberries, and nuts for a light meal.</li>
+                <li>🌮 <strong>Turkey Tacos:</strong> Use ground turkey instead of beef for a leaner option.</li>
+                <li>🍗 <strong>Smoked or Fried Turkey:</strong> A delicious way to get crispy skin and juicy meat.</li>
+            </ul>
+        
+            <h2>Fun Facts About Turkey</h2>
+            <ul>
+                <li>🦃 The wild turkey was almost the <strong>national bird of the United States</strong>—Ben Franklin preferred it over the bald eagle!</li>
+                <li>🍖 The <strong>largest turkey ever recorded</strong> weighed 86 pounds (39 kg).</li>
+                <li>💤 Turkey contains <strong>tryptophan</strong>, an amino acid that can make you feel sleepy (though the large Thanksgiving meal is the real culprit).</li>
+                <li>🌎 Over <strong>45 million turkeys</strong> are eaten on Thanksgiving in the U.S. alone!</li>
+            </ul>
+        
+            <h2>Uses of Canned Turkey</h2>
+            <p>
+                Canned turkey is a convenient ingredient that can be used in a variety of meals. Some popular ways to use canned turkey include:
+            </p>
+        
+            <ul>
+                <li>🍛 <strong>Casseroles:</strong> Turkey pot pie, turkey and stuffing bake, or turkey tetrazzini.</li>
+                <li>🍜 <strong>Soups & Stews:</strong> Adds flavor and protein to quick meals.</li>
+                <li>🥙 <strong>Wraps & Sandwiches:</strong> Can replace deli meat for a quick meal.</li>
+                <li>🌯 <strong>Tacos or Burritos:</strong> A great, fast protein option.</li>
+            </ul>
+        
+            <p><em>Let me know if you want even more turkey text! 🍗😆</em></p>
+        </article>
+        
+
+        <!-- Right Column: Images -->
+        <aside class="right-column">
+            <img src="photo.png" alt="Photo 1">
+            <img src="photo2.png" alt="Photo 2">
+            <img src="dil.jpg" alt="Photo 3">
+            <img src="jason.jpg" alt="Photo 4">
+            <img src="reed.jpg" alt="Photo 5">
+        </aside>
+    </main>
+
+    <!-- Footer -->
+    <footer>THIS IS THE BOTTOM</footer>
+
+    <script>
+        // Falling cash effect
+        setInterval(() => {
+            let cash = document.createElement('img');
+            cash.src = 'cash1.png'; // Ensure the image path is correct
+            cash.classList.add('falling-cash');
+            cash.style.left = Math.random() * window.innerWidth + "px"; // Random horizontal position
+            document.body.appendChild(cash);
+
+            // Remove the cash after it falls
+            setTimeout(() => {
+                cash.remove();
+            }, 5000);
+        }, 500); // Generates a new piece of falling cash every 500ms
+
+                // Floating images rising from bottom to top
+        setInterval(() => {
+            let floatingImg = document.createElement('img');
+            floatingImg.src = '79.jpg'; // Ensure the path is correct
+            floatingImg.classList.add('floating-image');
+            floatingImg.style.left = Math.random() * window.innerWidth + "px"; // Random horizontal position
+            document.body.appendChild(floatingImg);
+
+            // Remove the image after animation completes
+            setTimeout(() => {
+                floatingImg.remove();
+            }, 5000); // Matches animation duration
+        }, 1000); // Generates a new floating image every second
+
+
+        document.addEventListener("DOMContentLoaded", () => {
+        const body = document.body;
+
+        // Firework Effect on Click
+        document.addEventListener("click", (event) => {
+            for (let i = 0; i < 20; i++) {
+                let spark = document.createElement("div");
+                spark.classList.add("spark");
+                spark.style.left = `${event.clientX}px`;
+                spark.style.top = `${event.clientY}px`;
+                body.appendChild(spark);
+
+                // Randomize movement
+                let angle = Math.random() * 2 * Math.PI;
+                let speed = Math.random() * 5 + 2;
+                let xMove = Math.cos(angle) * speed;
+                let yMove = Math.sin(angle) * speed;
+
+                spark.animate(
+                    [
+                        { transform: `translate(0, 0)`, opacity: 1 },
+                        { transform: `translate(${xMove * 20}px, ${yMove * 20}px)`, opacity: 0 }
+                    ],
+                    { duration: 600, easing: "ease-out" }
+                );
+
+                setTimeout(() => spark.remove(), 600);
+            }
+        });
+
+        // Drawing Effect on Click & Drag
+        let isDrawing = false;
+        let prevX, prevY;
+        
+        document.addEventListener("mousedown", (event) => {
+            isDrawing = true;
+            prevX = event.clientX;
+            prevY = event.clientY;
+        });
+
+        document.addEventListener("mousemove", (event) => {
+            if (!isDrawing) return;
+
+            let line = document.createElement("div");
+            line.classList.add("draw-line");
+            body.appendChild(line);
+
+            let deltaX = event.clientX - prevX;
+            let deltaY = event.clientY - prevY;
+            let distance = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
+
+            line.style.left = `${prevX}px`;
+            line.style.top = `${prevY}px`;
+            line.style.width = `${distance}px`;
+            line.style.transform = `rotate(${Math.atan2(deltaY, deltaX)}rad)`;
+
+            prevX = event.clientX;
+            prevY = event.clientY;
+
+            setTimeout(() => line.remove(), 500);
+        });
+
+        document.addEventListener("mouseup", () => {
+            isDrawing = false;
+        });
+    });
+    let danceUnlocked = false;
+        let userInput = "";
+
+        // Listen for password input
+        document.getElementById("password-box").addEventListener("keypress", function(event) {
+            if (event.key === "Enter") {
+                if (this.value.toLowerCase() === "password") {
+                    danceUnlocked = true;
+                    this.value = "";
+                    this.placeholder = "Dance mode unlocked! Type 'DANCE'";
+                    alert("Dance Mode Unlocked!");
+                } else {
+                    alert("Wrong password!");
+                }
+            }
+        });
+
+        // Listen for "DANCE" input if unlocked
+        document.addEventListener("keydown", (event) => {
+            if (!danceUnlocked) return;
+            
+            userInput += event.key.toUpperCase();
+            if (userInput.includes("DANCE")) {
+                document.body.classList.add("dance-mode");
+                document.getElementById("disco-ball").style.display = "block";
+                
+                let audio = new Audio("party.mp3");
+                audio.play();
+                
+                userInput = "";
+            }
+        });
+
+        document.getElementById("start-bounce").addEventListener("click", function() {
+});
+
+
+    </script>
+</body>
+</html>
